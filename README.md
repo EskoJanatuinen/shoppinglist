@@ -2,7 +2,7 @@
 
 I made this app to make my grocery shopping easier! It arranges the shopping list in the order of the store divisions in Citymarket Kolmisoppi (Kuopio). This saves me at least 30 minutes each time I'm grocery shopping. :)
 
-This is a Firebase app (cloud-hosted, NoSQL database). Node.js/Express was used for the server functionalities.
+This is a Firebase app (cloud-hosted, NoSQL database). Node.js/Express was used for the server functionalities. The product form is generated dynamically from a JSON-file to enable easier editing of listed products. 
 
 This was my first project with Javascript and Firebase so the code is not pretty. But it works!
 
