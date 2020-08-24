@@ -1,0 +1,86 @@
+html {
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+form {
+  margin: 2em 0 2em 10%;
+  width: auto;
+  border-left: 2px solid #ccc;
+  padding: 1em 6%;
+}
+
+input,
+textarea {
+  font: 1em sans-serif;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #000;
+}
+
+input[type="number"] {
+  width: 40px;
+}
+
+input[type="checkbox"]:checked {
+  color: red;
+  text-decoration: line-through;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 8px;
+  width: 6em;
+}
+
+textarea {
+  vertical-align: top;
+  height: 6em;
+  width: 400px;
+}
+
+.buttonHolder {
+  /* text-align: center; */
+  margin: auto;
+  padding: 16px 16px;
+}
+
+button {
+  margin-left: 0.5em;
+}
+
+.basicDiv {
+  margin: 2em 0 2em 10%;
+  width: auto;
+  border-left: 2px solid #ccc;
+  padding: 1em 6%;
+  display: table;
+}
+
+@media only screen and (orientation: portrait) {
+  form,
+  .basicDiv {
+    margin: 2em 1em 1em 1em;
+    width: auto;
+    border-left: 2px solid #ccc;
+    padding: 1em 6%;
+    line-height: 1.7;
+    font-size: 16px;
+  }
+  textarea {
+    margin-right: 1.5em;
+    width: 90%;
+  }
+}

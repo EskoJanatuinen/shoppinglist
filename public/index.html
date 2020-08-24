@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="styles/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+    <!-- Seuraava scripti tarvittiin jostain syystä, jotta tuotedata.js import onnistuu: -->
+    <script>
+      var exports = {};
+    </script>
+    <script type="text/javascript" src="tuotedata.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ostokset</title>
+  </head>
+
+  <body onload="createForm();">
+    <form id="formed" action="/valmis" method="post">
+      <h1>OSTOSLISTA</h1>
+      <div class="buttonHolder">
+        <input type="submit" value="Lähetä" />
+      </div>
+    </form>
+
+    <script>
+      // Luodaan lomake tuotedata.js tiedoston datasta
+      // Data ja osastot ovat tuotedata.js -tiedostossa olevat taulukot
+      function createForm() {
+        form = document.getElementById("formed");
+
+        for (j in osastot) {
+          let h2 = document.createElement("h2");
+          let osasto = document.createTextNode(osastot[j]);
+          h2.appendChild(osasto);
+          form.appendChild(h2);
+
+          for (i in data) {
+            var item = data[i];
+            let iDiv = document.createElement("div");
+
+            if (item[2] === osastot[j]) {
+              form.appendChild(iDiv);
+              item = data[i];
+              var input = document.createElement("input");
+              input.setAttribute("type", "number");
+              input.setAttribute("name", item[0]);
+              iDiv.appendChild(input);
+              iDiv.appendChild(document.createTextNode(" " + item[1]));
+            }
+          }
+        }
+
+        // Vapaa tekstikenttä muita ostoksia varten
+        form.appendChild(document.createElement("br"));
+        form.appendChild(document.createElement("hr"));
+        form.appendChild(document.createElement("br"));
+        form.appendChild(document.createTextNode("Muut ostokset:"));
+        form.appendChild(document.createElement("br"));
+        var textArea = document.createElement("textarea");
+        textArea.setAttribute("type", "textarea");
+        textArea.setAttribute("name", "otherProducts");
+        form.appendChild(textArea);
+      }
+    </script>
+  </body>
+</html>
