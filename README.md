@@ -1,8 +1,8 @@
-# Ostoslista
+# Ostoslista (shopping list)
 
 I made this app to make my grocery shopping easier! It arranges the shopping list in the order of the store divisions in Citymarket Kolmisoppi (Kuopio). This saves me at least 30 minutes each time I'm grocery shopping. :)
 
-This is a Firebase app so the database is in the Google cloud. Node.js/Express was used for the server functionalities.
+This is a Firebase app so the database runs on the Google cloud. Node.js/Express was used for the server functionalities.
 
 This was my first project with Javascript and Firebase so the code is not pretty. But it works!
 
