@@ -8,7 +8,7 @@
       rel="stylesheet"
     />
     <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
-    <!-- Seuraava scripti tarvittiin jostain syystä, jotta tuotedata.js import onnistuu: -->
+    <!-- For some reason, the following script was needed in order to import tuotedata.js: -->
     <script>
       var exports = {};
     </script>
@@ -26,8 +26,8 @@
     </form>
 
     <script>
-      // Luodaan lomake tuotedata.js tiedoston datasta
-      // Data ja osastot ovat tuotedata.js -tiedostossa olevat taulukot
+      // Generating the form based on tuotedata.js
+      // Data ja osastot are table-names in the tuotedata.js
       function createForm() {
         form = document.getElementById("formed");
 
@@ -53,7 +53,7 @@
           }
         }
 
-        // Vapaa tekstikenttä muita ostoksia varten
+        // FA fee text-field for the groceries missing from the form
         form.appendChild(document.createElement("br"));
         form.appendChild(document.createElement("hr"));
         form.appendChild(document.createElement("br"));

@@ -3,7 +3,6 @@ const express = require("express");
 const admin = require("firebase-admin");
 const serviceAccount = require("./serviceAccount");
 const tuoteData = require("./tuotteet").data;
-// const osastot = require("./tuotteet").osastot;
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
