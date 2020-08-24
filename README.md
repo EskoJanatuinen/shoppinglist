@@ -9,3 +9,8 @@ This was my first project with Javascript and Firebase so the code is not pretty
 ps. if someone knows how to reference public folder from functions folder, please let me know! This seems to be prohibited with Firebase. I had to make a duplicate of my JSON-file containing the product data as I needed to access it both from index.html (in public) and from index.js (in functions).
 
 <a href="https://ostokset.web.app/">Ostoslista</a>
+
+</br>
+</br>
+
+<img src="https://user-images.githubusercontent.com/47399693/91087845-c92f0080-e659-11ea-84ed-d7278414c070.jpg" width="250">
