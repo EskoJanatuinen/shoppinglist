@@ -27,7 +27,7 @@
 
     <script>
       // Generating the form based on tuotedata.js
-      // Data ja osastot are table-names in the tuotedata.js
+      // Data and osastot are table-names in the tuotedata.js
       function createForm() {
         form = document.getElementById("formed");
 
@@ -38,13 +38,13 @@
           form.appendChild(h2);
 
           for (i in data) {
-            var item = data[i];
+            let item = data[i];
             let iDiv = document.createElement("div");
 
             if (item[2] === osastot[j]) {
               form.appendChild(iDiv);
               item = data[i];
-              var input = document.createElement("input");
+              let input = document.createElement("input");
               input.setAttribute("type", "number");
               input.setAttribute("name", item[0]);
               iDiv.appendChild(input);

@@ -42,8 +42,8 @@ app.get("/lista", (req, res) => {
       let pakasteetHTML = "";
 
       // Fetching keys and values to separate tables
-      var avaimet = Object.keys(products[0]);
-      var arvot = Object.values(products[0]);
+      let avaimet = Object.keys(products[0]);
+      let arvot = Object.values(products[0]);
 
       // Iterating through products and choosing those with values
       for (index = 0; index < avaimet.length; index++) {
@@ -135,7 +135,7 @@ app.get("/lista", (req, res) => {
         [muutaHTML, "Muuta"],
       ];
 
-      var htmlList =
+      let htmlList =
         "<!DOCTYPE html><html><head><meta charset='utf-8' />" +
         "<link href='styles/style.css' rel='stylesheet' /><link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' />" +
         "<meta name='viewport' content='width=device-width, initial-scale=1' />" +
@@ -156,6 +156,8 @@ app.get("/lista", (req, res) => {
     .catch((err) => console.error(err));
 });
 
+// Had to hard-code the "add-commands", as I couldn't find a way to create code dynamically from product-table.
+// If I add more products to tuotedata.js, I have to add them her ealso
 async function insertFormData(request) {
   const writeResult = await admin
     .firestore()
