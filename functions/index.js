@@ -157,7 +157,7 @@ app.get("/lista", (req, res) => {
 });
 
 // Had to hard-code the "add-commands", as I couldn't find a way to create code dynamically from product-table.
-// If I add more products to tuotedata.js, I have to add them her ealso
+// If adding new products to tuotedata.js, they must be added here also
 async function insertFormData(request) {
   const writeResult = await admin
     .firestore()
